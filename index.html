@@ -764,8 +764,8 @@
         <span class="first">Andrew<br></span>
         <span class="last">SOMBE</span>
       </h1>
-      <p class="hero-title">SOC Analyst · Penetration Tester · Cloud Security · Malware Analyst</p>
-      <p class="hero-desc">Defending digital frontiers through adversarial thinking. Specialized in threat detection, offensive security, and cloud infrastructure protection — turning vulnerabilities into resilience.</p>
+      <p class="hero-title">SOC Analyst · Penetration Tester · Active Directory · Zero Trust Security</p>
+      <p class="hero-desc">Defending digital frontiers through adversarial thinking. Specialized in threat detection, offensive security, identity protection, and zero-trust network architecture — turning vulnerabilities into resilience.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="#contact" class="btn-secondary">Get In Touch</a>
@@ -879,36 +879,42 @@
       </div>
 
       <div class="skill-card purple">
-        <span class="skill-icon">☁️</span>
-        <div class="skill-name">CLOUD SECURITY</div>
-        <p class="skill-desc">Securing cloud workloads, IAM hardening, infrastructure-as-code security review, and cloud-native threat detection.</p>
+        <span class="skill-icon">🔑</span>
+        <div class="skill-name">ACTIVE DIRECTORY SECURITY</div>
+        <p class="skill-desc">Hardening and defending identity infrastructure: attack-path awareness (spraying, Kerberoasting, DCSync) backed by working detection logic — one markdown per technique with event IDs, Sigma-style rules and hardening steps.</p>
         <div class="skill-tags">
-          <span class="tag purple">AWS Security</span>
-          <span class="tag purple">Azure Defender</span>
-          <span class="tag purple">IAM</span>
-          <span class="tag purple">Terraform</span>
-          <span class="tag purple">CIS Benchmarks</span>
+          <span class="tag purple">Active Directory</span>
+          <span class="tag purple">Sigma</span>
+          <span class="tag purple">MITRE ATT&CK</span>
+          <span class="tag purple">Windows Events</span>
+          <span class="tag purple">gMSA / LAPS</span>
         </div>
         <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiency</span><span>80%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:80%; background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink))"></div></div>
+          <div class="skill-bar-label"><span>Proficiency</span><span>75%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:75%; background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink))"></div></div>
+        </div>
+        <div style="margin-top:1rem">
+          <a href="https://github.com/kas13060/active-directory-security-lab" target="_blank" class="project-link">Proof →</a>
         </div>
       </div>
 
       <div class="skill-card pink">
-        <span class="skill-icon">🔬</span>
-        <div class="skill-name">MALWARE / REVERSE ENG.</div>
-        <p class="skill-desc">Static and dynamic malware analysis, binary reversing, sandbox detonation, and threat intelligence extraction from samples.</p>
+        <span class="skill-icon">🧱</span>
+        <div class="skill-name">ZERO TRUST NETWORK ARCHITECTURE</div>
+        <p class="skill-desc">Putting NIST SP 800-207 into practice: microsegmentation, least-privilege flows and deny-by-default enforcement — designed as a Packet Tracer lab with VLANs, inter-VLAN ACLs and a written trust matrix.</p>
         <div class="skill-tags">
-          <span class="tag pink">IDA Pro</span>
-          <span class="tag pink">Ghidra</span>
-          <span class="tag pink">Wireshark</span>
-          <span class="tag pink">YARA Rules</span>
-          <span class="tag pink">Volatility</span>
+          <span class="tag pink">NIST 800-207</span>
+          <span class="tag pink">Micro-segmentation</span>
+          <span class="tag pink">VLAN ACLs</span>
+          <span class="tag pink">Packet Tracer</span>
+          <span class="tag pink">ZTNA</span>
         </div>
         <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiency</span><span>78%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:78%; background: linear-gradient(90deg, var(--neon-pink), var(--neon-purple))"></div></div>
+          <div class="skill-bar-label"><span>Proficiency</span><span>72%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:72%; background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan))"></div></div>
+        </div>
+        <div style="margin-top:1rem">
+          <a href="https://github.com/kas13060/ztna-packet-tracer-lab" target="_blank" class="project-link">Proof →</a>
         </div>
       </div>
     </div>
@@ -946,16 +952,16 @@
       <div class="project-card">
         <div class="project-number">PROJECT // 002</div>
         <div class="project-name">Enterprise SOC Lab Setup</div>
-        <p class="project-desc">Built a full-scale home SOC lab with Elastic SIEM, Wazuh HIDS, and custom detection rules mapped to MITRE ATT&CK, simulating real enterprise threat monitoring.</p>
+        <p class="project-desc">Building a working home SOC: Wazuh all-in-one server, Windows telemetry with Sysmon, custom detection rules (logon spray bursts, T1098 group changes) mapped to MITRE ATT&CK — the full build is a copy-pasteable how-to.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
-          <span class="tag cyan">Elastic SIEM</span>
           <span class="tag cyan">Wazuh</span>
+          <span class="tag cyan">Sysmon</span>
           <span class="tag cyan">MITRE ATT&CK</span>
         </div>
         <div class="project-footer">
           <div class="project-links">
-            <a href="#" class="project-link">GitHub →</a>
-            <a href="#" class="project-link">Write-up →</a>
+            <a href="https://github.com/kas13060/soc-lab-howto" target="_blank" class="project-link">GitHub →</a>
+            <a href="https://github.com/kas13060/soc-lab-howto#readme" target="_blank" class="project-link">How-to →</a>
           </div>
         </div>
       </div>
@@ -963,66 +969,69 @@
       <div class="project-card">
         <div class="project-number">PROJECT // 003</div>
         <div class="project-name">Web App Pentest Report</div>
-        <p class="project-desc">Conducted a full OWASP Top 10 assessment on a practice target, discovering SQLi, XSS, IDOR, and broken auth vulnerabilities. Delivered professional remediation report.</p>
+        <p class="project-desc">OWASP Top 10 (2021) assessment of OWASP Juice Shop on my own local instance: SQL injection, broken access control, IDOR, XSS — each finding with reproduction steps, remediation and a report-ready format.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
+          <span class="tag green">Juice Shop</span>
           <span class="tag green">Burp Suite</span>
-          <span class="tag green">OWASP</span>
-          <span class="tag green">SQLmap</span>
+          <span class="tag green">OWASP Top 10</span>
+          <span class="tag green">sqlmap</span>
         </div>
         <div class="project-footer">
           <div class="project-links">
-            <a href="#" class="project-link">GitHub →</a>
-            <a href="#" class="project-link disabled">Private</a>
+            <a href="https://github.com/kas13060/juice-shop-pentest-report" target="_blank" class="project-link">GitHub →</a>
+            <a href="https://github.com/kas13060/juice-shop-pentest-report/blob/main/REPORT.md" target="_blank" class="project-link">Report →</a>
           </div>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-number">PROJECT // 004</div>
-        <div class="project-name">AWS Cloud Security Audit</div>
-        <p class="project-desc">Performed a comprehensive AWS security assessment: IAM misconfiguration analysis, S3 bucket exposure checks, CloudTrail log review, and Security Hub integration.</p>
+        <div class="project-name">Zero Trust Network Architecture Lab</div>
+        <p class="project-desc">NIST SP 800-207 principles in Cisco Packet Tracer: four VLANs, inter-VLAN routing and nested ACLs implementing a written trust matrix — users reach exactly one web flow, the database initiates nothing, MGMT is SSH-only. Packet file in progress.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
-          <span class="tag purple">AWS</span>
-          <span class="tag purple">CloudTrail</span>
-          <span class="tag purple">ScoutSuite</span>
+          <span class="tag purple">NIST 800-207</span>
+          <span class="tag purple">Packet Tracer</span>
+          <span class="tag purple">VLAN ACLs</span>
+          <span class="tag purple">Micro-segmentation</span>
         </div>
         <div class="project-footer">
           <div class="project-links">
-            <a href="#" class="project-link">GitHub →</a>
-            <a href="#" class="project-link">Report →</a>
+            <a href="https://github.com/kas13060/ztna-packet-tracer-lab" target="_blank" class="project-link">GitHub →</a>
+            <a href="https://github.com/kas13060/ztna-packet-tracer-lab/tree/main/configs" target="_blank" class="project-link">Configs →</a>
           </div>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-number">PROJECT // 005</div>
-        <div class="project-name">Malware Sample Analysis</div>
-        <p class="project-desc">Reverse engineered a ransomware sample using Ghidra and dynamic analysis in an isolated sandbox. Extracted C2 IOCs and developed YARA detection signatures.</p>
+        <div class="project-name">Active Directory Security Lab</div>
+        <p class="project-desc">Attack/defence pairs for my own isolated AD lab: password spraying, Kerberoasting and DCSync — each with exact Windows Event IDs, a Sigma-style detection, and the hardening step that removes the attack's preconditions. Lab build in progress.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
-          <span class="tag pink">Ghidra</span>
-          <span class="tag pink">YARA</span>
-          <span class="tag pink">Any.run</span>
+          <span class="tag pink">Active Directory</span>
+          <span class="tag pink">Sigma</span>
+          <span class="tag pink">MITRE ATT&CK</span>
         </div>
         <div class="project-footer">
           <div class="project-links">
-            <a href="#" class="project-link">GitHub →</a>
-            <a href="#" class="project-link">IOCs →</a>
+            <a href="https://github.com/kas13060/active-directory-security-lab" target="_blank" class="project-link">GitHub →</a>
+            <a href="https://github.com/kas13060/active-directory-security-lab/tree/main/detections" target="_blank" class="project-link">Detections →</a>
           </div>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-number">PROJECT // 006</div>
-        <div class="project-name">Python Threat Intelligence Tool</div>
-        <p class="project-desc">Developed a Python script to automate IOC lookups across VirusTotal, AbuseIPDB, and Shodan APIs, enriching alerts with contextual threat intelligence.</p>
+        <div class="project-name">Threat Intelligence IOC Tool</div>
+        <p class="project-desc">Minimal, human-readable Python: check an IP, domain or URL against abuse.ch URLhaus (no key) and optional VirusTotal. CLI plus a tiny local web UI on the standard library http.server — escaped output, env-only keys, unit tested.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
-          <span class="tag cyan">Python</span>
-          <span class="tag cyan">VirusTotal API</span>
-          <span class="tag cyan">Shodan</span>
+          <span class="tag cyan">Python stdlib</span>
+          <span class="tag cyan">URLhaus</span>
+          <span class="tag cyan">CLI + Web</span>
         </div>
         <div class="project-footer">
           <div class="project-links">
-            <a href="#" class="project-link">GitHub →</a>
+            <a href="https://github.com/kas13060/ioc-lookup" target="_blank" class="project-link">GitHub →</a>
+            <a href="https://github.com/kas13060/ioc-lookup#usage" target="_blank" class="project-link">Try it →</a>
           </div>
         </div>
       </div>
@@ -1030,7 +1039,7 @@
       <div class="project-card">
         <div class="project-number">PROJECT // 007</div>
         <div class="project-name">CTF Challenge Write-ups</div>
-        <p class="project-desc">Documented solutions to 15+ Capture The Flag challenges spanning forensics, crypto, web exploitation, binary exploitation, and reverse engineering.</p>
+        <p class="project-desc">Documented solutions to Capture The Flag challenges spanning forensics, crypto, web exploitation, binary exploitation, and reverse engineering — currently being collected and prepared for GitHub.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
           <span class="tag green">CTF</span>
           <span class="tag green">Forensics</span>
@@ -1039,7 +1048,7 @@
         </div>
         <div class="project-footer">
           <div class="project-links">
-            <a href="#" class="project-link">GitHub →</a>
+            <a href="#" class="project-link disabled">In progress — coming to GitHub</a>
           </div>
         </div>
       </div>
