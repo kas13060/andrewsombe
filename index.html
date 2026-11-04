@@ -484,6 +484,23 @@
     }
     .project-link:hover { text-shadow: 0 0 10px var(--neon-cyan); }
     .project-link.disabled { color: var(--text-muted); pointer-events: none; }
+    .project-thumb {
+      width: 100%;
+      border: 1px solid var(--dark-border);
+      margin-bottom: 1.2rem;
+      display: block;
+      background: var(--dark-surface);
+    }
+    .github-stats {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .github-stats img {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+    }
 
     /* CERTS */
     .certs-bg { background: var(--dark-surface); }
@@ -908,6 +925,26 @@
 
       <div class="project-card">
         <div class="project-number">PROJECT // 001</div>
+        <img src="assets/img/projects/netmon-toolkit.png" alt="NetMon Toolkit lab topology" class="project-thumb">
+        <div class="project-name">NetMon Toolkit</div>
+        <p class="project-desc">Python CLI toolkit for safe IPv4 network discovery: subnet calculator, ICMP ping sweep, TCP connect scanner with banner grabbing, and single-file HTML reports. Standard library only — built for lab use on networks I own.</p>
+        <div class="skill-tags" style="margin-bottom:1.2rem">
+          <span class="tag cyan">Python 3.11</span>
+          <span class="tag cyan">Sockets</span>
+          <span class="tag cyan">ICMP</span>
+          <span class="tag cyan">CIDR</span>
+          <span class="tag green">Lab-only</span>
+        </div>
+        <div class="project-footer">
+          <div class="project-links">
+            <a href="https://github.com/kas13060/netmon-toolkit" target="_blank" class="project-link">GitHub →</a>
+            <a href="https://github.com/kas13060/netmon-toolkit#readme" target="_blank" class="project-link">README →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-number">PROJECT // 002</div>
         <div class="project-name">Enterprise SOC Lab Setup</div>
         <p class="project-desc">Built a full-scale home SOC lab with Elastic SIEM, Wazuh HIDS, and custom detection rules mapped to MITRE ATT&CK, simulating real enterprise threat monitoring.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
@@ -924,7 +961,7 @@
       </div>
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 002</div>
+        <div class="project-number">PROJECT // 003</div>
         <div class="project-name">Web App Pentest Report</div>
         <p class="project-desc">Conducted a full OWASP Top 10 assessment on a practice target, discovering SQLi, XSS, IDOR, and broken auth vulnerabilities. Delivered professional remediation report.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
@@ -941,7 +978,7 @@
       </div>
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 003</div>
+        <div class="project-number">PROJECT // 004</div>
         <div class="project-name">AWS Cloud Security Audit</div>
         <p class="project-desc">Performed a comprehensive AWS security assessment: IAM misconfiguration analysis, S3 bucket exposure checks, CloudTrail log review, and Security Hub integration.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
@@ -958,7 +995,7 @@
       </div>
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 004</div>
+        <div class="project-number">PROJECT // 005</div>
         <div class="project-name">Malware Sample Analysis</div>
         <p class="project-desc">Reverse engineered a ransomware sample using Ghidra and dynamic analysis in an isolated sandbox. Extracted C2 IOCs and developed YARA detection signatures.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
@@ -975,7 +1012,7 @@
       </div>
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 005</div>
+        <div class="project-number">PROJECT // 006</div>
         <div class="project-name">Python Threat Intelligence Tool</div>
         <p class="project-desc">Developed a Python script to automate IOC lookups across VirusTotal, AbuseIPDB, and Shodan APIs, enriching alerts with contextual threat intelligence.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
@@ -991,7 +1028,7 @@
       </div>
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 006</div>
+        <div class="project-number">PROJECT // 007</div>
         <div class="project-name">CTF Challenge Write-ups</div>
         <p class="project-desc">Documented solutions to 15+ Capture The Flag challenges spanning forensics, crypto, web exploitation, binary exploitation, and reverse engineering.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
@@ -1007,6 +1044,10 @@
         </div>
       </div>
 
+    </div>
+    <div class="github-stats">
+      <img src="https://github-readme-stats.vercel.app/api?username=kas13060&show_icons=true&hide_border=true&bg_color=0a1628&title_color=00f5ff&text_color=e0f7ff&icon_color=39ff14" alt="kas13060 GitHub stats">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kas13060&layout=compact&hide_border=true&bg_color=0a1628&title_color=00f5ff&text_color=e0f7ff" alt="kas13060 top languages">
     </div>
   </section>
 
@@ -1089,9 +1130,9 @@
             <div class="contact-link-icon">in</div>
             linkedin.com/in/andrewsombe
           </a>
-          <a href="https://github.com/andrewsombe" class="contact-link" target="_blank">
+          <a href="https://github.com/kas13060" class="contact-link" target="_blank">
             <div class="contact-link-icon">⌥</div>
-            github.com/andrewsombe
+            github.com/kas13060
           </a>
           <a href="https://tryhackme.com/p/andrewsombe" class="contact-link" target="_blank">
             <div class="contact-link-icon">🔒</div>
