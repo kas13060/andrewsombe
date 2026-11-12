@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andrew SOMBE | Cybersecurity Professional</title>
-  <meta name="description" content="Andrew Sombe — cybersecurity professional. SOC analysis, penetration testing, Active Directory security and zero-trust network architecture. Projects, write-ups and labs." />
-  <meta property="og:title" content="Andrew SOMBE | Cybersecurity Professional" />
-  <meta property="og:description" content="SOC analysis, penetration testing, Active Directory security and zero-trust network architecture." />
+  <title>Andrew Sombe | Cybersecurity Student</title>
+  <meta name="description" content="Andrew Sombe, final-year Mathematics and Computer Science student (cybersecurity focus) at the University of Goroka, Papua New Guinea. Home-lab projects in SOC monitoring, detection rules, network security and secure design." />
+  <meta property="og:title" content="Andrew Sombe | Cybersecurity Student" />
+  <meta property="og:description" content="Andrew Sombe, final-year Mathematics and Computer Science student (cybersecurity focus) at the University of Goroka, Papua New Guinea. Home-lab projects in SOC monitoring, detection rules, network security and secure design." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kas13060.github.io/andrewsombe/" />
+  <meta property="og:image" content="https://kas13060.github.io/andrewsombe/assets/img/og-card.png" />
+  <meta property="og:image:alt" content="Name card: Andrew Sombe, Cybersecurity Student, University of Goroka, Papua New Guinea" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#05080d" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2305080d'/%3E%3Cpath d='M16 5l9 4v7c0 5.5-3.8 9.4-9 11-5.2-1.6-9-5.5-9-11V9l9-4z' fill='none' stroke='%232ad4e8' stroke-width='2'/%3E%3Ccircle cx='16' cy='15' r='3' fill='%232ad4e8'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +28,7 @@
       --dark-card: #0d141d;
       --dark-border: #182433;
       --text-primary: #dde8f0;
-      --text-muted: #64798a;
+      --text-muted: #7d92a2;
       --grid-color: rgba(42,212,232,0.035);
       --z-nav: 40;
       --z-overlay: 30;
@@ -441,58 +445,41 @@
 
     /* SKILLS */
     .skills-bg { background: var(--dark-surface); }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      max-width: 1160px;
-      margin-inline: auto;
-    }
-    .skill-card {
+    .table-scroll { max-width: 1160px; margin-inline: auto; overflow-x: auto; }
+    .evidence-table {
+      width: 100%;
+      border-collapse: collapse;
       background: var(--dark-card);
       border: 1px solid var(--dark-border);
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s;
-      display: flex;
-      flex-direction: column;
-    }
-    .skill-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(42,212,232,0.25);
-    }
-    .skill-card:active { transform: translateY(-1px); }
-    .skill-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0; height: 2px;
-    }
-    .skill-card.cyan::after { background: var(--neon-cyan); box-shadow: 0 0 10px rgba(42,212,232,0.5); }
-    .skill-card.green::after { background: var(--neon-green); box-shadow: 0 0 10px rgba(52,211,153,0.5); }
-    .skill-card.purple::after { background: var(--neon-purple); box-shadow: 0 0 10px rgba(167,139,250,0.5); }
-    .skill-card.pink::after { background: var(--neon-pink); box-shadow: 0 0 10px rgba(244,114,182,0.5); }
-    .skill-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-    .skill-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      letter-spacing: 2px;
-      margin-bottom: 0.8rem;
-    }
-    .skill-desc {
       font-size: 0.88rem;
-      color: rgba(221,232,240,0.55);
-      line-height: 1.7;
-      margin-bottom: 1.2rem;
-      flex-grow: 1;
-      text-wrap: pretty;
     }
+    .evidence-table th, .evidence-table td {
+      text-align: left;
+      padding: 0.9rem 1.1rem;
+      border-bottom: 1px solid rgba(24,36,51,0.8);
+      vertical-align: top;
+    }
+    .evidence-table th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .evidence-table td { color: rgba(221,232,240,0.72); line-height: 1.6; }
+    .evidence-table tbody tr:last-child td { border-bottom: none; }
+    .evidence-table tbody tr:hover td { background: rgba(42,212,232,0.03); }
+    .evidence-table a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--neon-cyan);
+      text-decoration: none;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .evidence-table a:hover { color: #7ce8f4; text-decoration: underline; }
+    .skills-note { max-width: 1160px; margin: 1.2rem auto 0; font-size: 0.85rem; color: var(--text-muted); }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
     .tag {
       font-family: 'JetBrains Mono', monospace;
@@ -505,11 +492,6 @@
     .tag.green { background: rgba(52,211,153,0.08); color: var(--neon-green); border: 1px solid rgba(52,211,153,0.2); }
     .tag.purple { background: rgba(167,139,250,0.08); color: var(--neon-purple); border: 1px solid rgba(167,139,250,0.2); }
     .tag.pink { background: rgba(244,114,182,0.08); color: var(--neon-pink); border: 1px solid rgba(244,114,182,0.2); }
-    .skill-proof {
-      margin-top: 1.2rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(24,36,51,0.8);
-    }
 
     /* PROJECTS */
     .projects-grid {
@@ -587,18 +569,74 @@
       background: var(--dark-surface);
       border-radius: 4px;
     }
-    .github-stats {
-      margin-top: 3rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      max-width: 1160px;
-      margin-inline: auto;
+    .status-badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 2px;
+      margin-left: 0.5rem;
+      vertical-align: 1px;
     }
-    .github-stats img {
+    .status-badge.done { color: var(--neon-green); border: 1px solid rgba(52,211,153,0.35); background: rgba(52,211,153,0.08); }
+    .status-badge.wip { color: var(--neon-purple); border: 1px solid rgba(167,139,250,0.35); background: rgba(167,139,250,0.08); }
+    .status-badge.planned { color: var(--neon-cyan); border: 1px solid rgba(42,212,232,0.35); background: rgba(42,212,232,0.08); }
+
+    .building-list { list-style: none; max-width: 1160px; margin-inline: auto; display: grid; gap: 1rem; }
+    .building-list li {
       background: var(--dark-card);
       border: 1px solid var(--dark-border);
-      border-radius: 4px;
+      padding: 1.2rem 1.5rem;
+      font-size: 0.92rem;
+      color: rgba(221,232,240,0.72);
+      line-height: 1.7;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .building-list li > .status-badge { flex-shrink: 0; margin-top: 0.25rem; margin-left: 0; }
+    .building-list strong { color: var(--text-primary); }
+
+    /* EDUCATION */
+    .edu-card {
+      max-width: 1160px;
+      margin-inline: auto;
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .edu-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--neon-cyan), transparent 70%);
+    }
+    .edu-degree {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .edu-focus {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--neon-cyan);
+      margin: 0.4rem 0 1rem;
+    }
+    .edu-detail { font-size: 0.92rem; color: rgba(221,232,240,0.65); margin-bottom: 1.2rem; }
+    .edu-coursework-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
     }
 
     /* CERTS */
@@ -646,14 +684,16 @@
       margin-top: 0.3rem;
     }
     .cert-status.pending { color: var(--neon-purple); }
+    .certs-grid.single { grid-template-columns: minmax(0, 480px); }
+    .certs-note { max-width: 1160px; margin: 1.2rem auto 0; font-size: 0.88rem; color: var(--text-muted); }
 
     /* CONTACT */
     .contact-wrapper {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      grid-template-columns: 1fr;
+      gap: 0;
       align-items: start;
-      max-width: 1160px;
+      max-width: 760px;
       margin-inline: auto;
     }
     .contact-info h3 {
@@ -692,39 +732,6 @@
       border-color: var(--neon-cyan);
       background: rgba(42,212,232,0.08);
     }
-
-    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-    .form-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .form-input, .form-textarea {
-      background: var(--dark-card);
-      border: 1px solid var(--dark-border);
-      color: var(--text-primary);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.9rem;
-      padding: 0.85rem 1rem;
-      outline: none;
-      transition: border-color 0.2s;
-      width: 100%;
-    }
-    .form-input:focus, .form-textarea:focus { border-color: rgba(42,212,232,0.4); }
-    .form-input.invalid, .form-textarea.invalid { border-color: rgba(244,114,182,0.6); }
-    .form-textarea { resize: vertical; min-height: 120px; }
-    .form-input::placeholder, .form-textarea::placeholder { color: var(--text-muted); }
-    .form-status {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      letter-spacing: 1px;
-      min-height: 1.2em;
-      color: var(--neon-green);
-    }
-    .form-status.error { color: var(--neon-pink); }
 
     /* FOOTER */
     footer {
@@ -804,26 +811,6 @@
       100%{ text-shadow: 0 0 40px rgba(42,212,232,0.35); }
     }
 
-    /* Skill bar */
-    .skill-bar-wrap { margin-top: 0.8rem; }
-    .skill-bar-label {
-      display: flex; justify-content: space-between;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem; color: var(--text-muted);
-      margin-bottom: 0.3rem; letter-spacing: 1px;
-    }
-    .skill-bar-track {
-      height: 3px;
-      background: rgba(255,255,255,0.05);
-      position: relative; overflow: hidden;
-    }
-    .skill-bar-fill {
-      height: 100%;
-      width: 0;
-      background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
-      box-shadow: 0 0 8px rgba(42,212,232,0.5);
-      transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-    }
   </style>
 </head>
 <body>
@@ -835,6 +822,7 @@
     <a href="#" class="nav-logo">AS<span>_</span>SEC</a>
     <ul class="nav-links" id="nav-menu">
       <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certifications">Certs</a></li>
@@ -842,7 +830,7 @@
     </ul>
     <div class="nav-status">
       <div class="status-dot"></div>
-      AVAILABLE FOR HIRE
+      OPEN TO GRADUATE AND ENTRY-LEVEL ROLES
     </div>
     <button class="nav-hamburger" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
       <span></span>
@@ -855,16 +843,16 @@
   <section class="hero" id="home">
     <div class="hero-bg-glow"></div>
     <div class="hero-content">
-      <p class="hero-tag">Cybersecurity Professional</p>
+      <p class="hero-tag">Cybersecurity Student</p>
       <h1 class="hero-name">
         <span class="first">Andrew<br></span>
         <span class="last">SOMBE</span>
       </h1>
-      <p class="hero-title">SOC Analyst · Penetration Tester · Active Directory · Zero Trust Security</p>
-      <p class="hero-desc">Defending digital frontiers through adversarial thinking. Specialized in threat detection, offensive security, identity protection, and zero-trust network architecture — turning vulnerabilities into resilience.</p>
+      <p class="hero-title">Blue team · Detection rules · Network security · Secure design</p>
+      <p class="hero-desc">I'm a final-year cybersecurity student at the University of Goroka in Papua New Guinea. I learn by building: home labs, detection rules, and documented write-ups that anyone can check on my GitHub. I'm looking for a graduate or entry-level security role.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="#contact" class="btn-secondary">Get In Touch</a>
+        <a href="#contact" class="btn-secondary">Contact Me</a>
       </div>
     </div>
 
@@ -878,15 +866,16 @@
       <br>
       <span class="t-line">{</span><br>
       &nbsp;&nbsp;<span class="t-key">"name"</span>: <span class="t-value">"Andrew SOMBE"</span>,<br>
-      &nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-value">"Cybersecurity Pro"</span>,<br>
-      &nbsp;&nbsp;<span class="t-key">"clearance"</span>: <span class="t-value">"Active"</span>,<br>
+      &nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-value">"Cybersecurity student"</span>,<br>
+      &nbsp;&nbsp;<span class="t-key">"university"</span>: <span class="t-value">"University of Goroka"</span>,<br>
+      &nbsp;&nbsp;<span class="t-key">"location"</span>: <span class="t-value">"Papua New Guinea"</span>,<br>
       &nbsp;&nbsp;<span class="t-key">"focus"</span>: [<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-value">"SOC / Threat Analysis"</span>,<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-value">"Penetration Testing"</span>,<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-value">"Cloud Security"</span>,<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-value">"Malware Analysis"</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-value">"Blue team / SOC monitoring"</span>,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-value">"Detection rules (Sigma, Wazuh)"</span>,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-value">"Network security (Packet Tracer)"</span>,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-value">"Security research (literature reviews)"</span><br>
       &nbsp;&nbsp;],<br>
-      &nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-value">"ONLINE"</span><br>
+      &nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-value">"open_to_graduate_roles"</span><br>
       <span class="t-line">}</span><br>
       <br>
       <span class="t-comment">$ </span><span class="t-cursor"></span>
@@ -907,117 +896,108 @@
     </div>
     <div class="about-grid">
       <div class="about-text">
-        <p>I'm a cybersecurity professional with deep expertise across the full security spectrum — from proactive threat hunting and SOC operations to hands-on penetration testing and malware reverse engineering.</p>
-        <p>My approach is adversarial: I think like an attacker to build defenses that hold. Whether monitoring for live threats in a SOC environment, exploiting vulnerabilities in authorized engagements, securing cloud infrastructure, or dissecting malicious code — I bring precision and tenacity to every mission.</p>
-        <p>I'm passionate about staying ahead of the threat landscape and continuously sharpening my skills through research, CTF competitions, and real-world engagements.</p>
+        <p>I'm finishing a Bachelor of Mathematics and Computer Science at the University of Goroka, with a focus on cybersecurity.</p>
+        <p>Most of what I know comes from building things in my own lab: a Wazuh SOC setup with custom detection rules, a zero-trust network in Cisco Packet Tracer, an Active Directory attack-and-detection lab, a web app pentest report on OWASP Juice Shop, and a systematic literature review on ransomware. Every project is on GitHub with a README so you can see exactly what I did and what is still unfinished.</p>
+        <p>I'm based in Papua New Guinea and I'm interested in roles in banking, government, telecoms and industry (including OT security for mining and manufacturing). Right now I'm working toward my CompTIA Security+ and continuing my security research at university.</p>
       </div>
       <div class="about-stats">
         <div class="stat-card">
-          <div class="stat-number">50+</div>
-          <div class="stat-label">Vulnerabilities Found</div>
+          <div class="stat-number">7</div>
+          <div class="stat-label">Public Projects</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">CTF Challenges</div>
+          <div class="stat-number">25</div>
+          <div class="stat-label">Papers in Ransomware SLR</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">3+</div>
-          <div class="stat-label">Years Experience</div>
+          <div class="stat-number">3</div>
+          <div class="stat-label">AD Detection Pairs</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Threat Coverage</div>
+          <div class="stat-number">4</div>
+          <div class="stat-label">VLANs in ZTNA Lab</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="skills-bg">
+    <div class="section-header">
+      <div class="section-label">Education</div>
+      <h2 class="section-title">Where I'm <span>Studying</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-degree">Bachelor of Mathematics and Computer Science</div>
+      <div class="edu-focus">Cybersecurity focus · Final year</div>
+      <p class="edu-detail">University of Goroka, Papua New Guinea.</p>
+      <div class="edu-coursework-label">Relevant coursework</div>
+      <div class="skill-tags">
+        <span class="tag cyan">Advance Computer Security (MCS442)</span>
+        <span class="tag cyan">Advanced Networking</span>
+        <span class="tag cyan">Number Theory and Cryptography</span>
+        <span class="tag cyan">Computer Architecture (MCS446)</span>
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="skills-bg">
+  <section id="skills">
     <div class="section-header">
-      <div class="section-label">Expertise</div>
-      <h2 class="section-title">Core <span>Specializations</span></h2>
+      <div class="section-label">Evidence</div>
+      <h2 class="section-title">Skills and Where I <span>Used Them</span></h2>
       <div class="section-divider"></div>
     </div>
-    <div class="skills-grid">
-      <div class="skill-card cyan">
-        <span class="skill-icon">🛡️</span>
-        <div class="skill-name">SOC / THREAT ANALYSIS</div>
-        <p class="skill-desc">Real-time monitoring, incident detection, log correlation, and threat intelligence integration across enterprise environments.</p>
-        <div class="skill-tags">
-          <span class="tag cyan">SIEM</span>
-          <span class="tag cyan">Splunk</span>
-          <span class="tag cyan">Elastic Stack</span>
-          <span class="tag cyan">MITRE ATT&CK</span>
-          <span class="tag cyan">Threat Hunting</span>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiency</span><span>90%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="90%"></div></div>
-        </div>
-      </div>
-
-      <div class="skill-card green">
-        <span class="skill-icon">⚔️</span>
-        <div class="skill-name">PENETRATION TESTING</div>
-        <p class="skill-desc">Full-scope offensive security engagements — network, web application, and social engineering assessments with detailed reporting.</p>
-        <div class="skill-tags">
-          <span class="tag green">Metasploit</span>
-          <span class="tag green">Burp Suite</span>
-          <span class="tag green">Nmap</span>
-          <span class="tag green">OWASP Top 10</span>
-          <span class="tag green">Kali Linux</span>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiency</span><span>85%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="85%" style="background: linear-gradient(90deg, var(--neon-green), var(--neon-cyan))"></div></div>
-        </div>
-      </div>
-
-      <div class="skill-card purple">
-        <span class="skill-icon">🔑</span>
-        <div class="skill-name">ACTIVE DIRECTORY SECURITY</div>
-        <p class="skill-desc">Hardening and defending identity infrastructure: attack-path awareness (spraying, Kerberoasting, DCSync) backed by working detection logic — one markdown per technique with event IDs, Sigma-style rules and hardening steps.</p>
-        <div class="skill-tags">
-          <span class="tag purple">Active Directory</span>
-          <span class="tag purple">Sigma</span>
-          <span class="tag purple">MITRE ATT&CK</span>
-          <span class="tag purple">Windows Events</span>
-          <span class="tag purple">gMSA / LAPS</span>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiency</span><span>75%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="75%" style="background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink))"></div></div>
-        </div>
-        <div class="skill-proof">
-          <a href="https://github.com/kas13060/active-directory-security-lab" target="_blank" class="project-link">Proof →</a>
-        </div>
-      </div>
-
-      <div class="skill-card pink">
-        <span class="skill-icon">🧱</span>
-        <div class="skill-name">ZERO TRUST NETWORK ARCHITECTURE</div>
-        <p class="skill-desc">Putting NIST SP 800-207 into practice: microsegmentation, least-privilege flows and deny-by-default enforcement — designed as a Packet Tracer lab with VLANs, inter-VLAN ACLs and a written trust matrix.</p>
-        <div class="skill-tags">
-          <span class="tag pink">NIST 800-207</span>
-          <span class="tag pink">Micro-segmentation</span>
-          <span class="tag pink">VLAN ACLs</span>
-          <span class="tag pink">Packet Tracer</span>
-          <span class="tag pink">ZTNA</span>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiency</span><span>72%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="72%" style="background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan))"></div></div>
-        </div>
-        <div class="skill-proof">
-          <a href="https://github.com/kas13060/ztna-packet-tracer-lab" target="_blank" class="project-link">Proof →</a>
-        </div>
-      </div>
+    <div class="table-scroll">
+      <table class="evidence-table">
+        <thead>
+          <tr><th scope="col">Skill / tool</th><th scope="col">Where I used it</th><th scope="col">Proof</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Wazuh, Sysmon, MITRE ATT&CK mapping</td>
+            <td>Enterprise SOC Lab (build guide)</td>
+            <td><a href="https://github.com/kas13060/soc-lab-howto" target="_blank" rel="noopener">soc-lab-howto →</a></td>
+          </tr>
+          <tr>
+            <td>Windows Event IDs, Sigma-style rules, hardening (LAPS, gMSA)</td>
+            <td>Active Directory Security Lab</td>
+            <td><a href="https://github.com/kas13060/active-directory-security-lab" target="_blank" rel="noopener">AD lab →</a></td>
+          </tr>
+          <tr>
+            <td>Cisco Packet Tracer, VLANs, ACLs, NIST SP 800-207</td>
+            <td>Zero Trust Network Architecture Lab</td>
+            <td><a href="https://github.com/kas13060/ztna-packet-tracer-lab" target="_blank" rel="noopener">ZTNA lab →</a></td>
+          </tr>
+          <tr>
+            <td>Burp Suite, sqlmap, OWASP Top 10</td>
+            <td>Juice Shop Pentest Report</td>
+            <td><a href="https://github.com/kas13060/juice-shop-pentest-report" target="_blank" rel="noopener">Report →</a></td>
+          </tr>
+          <tr>
+            <td>Python (standard library, sockets, CLI tools)</td>
+            <td>NetMon Toolkit, IOC Lookup Tool</td>
+            <td><a href="https://github.com/kas13060/netmon-toolkit" target="_blank" rel="noopener">NetMon →</a> · <a href="https://github.com/kas13060/ioc-lookup" target="_blank" rel="noopener">IOC →</a></td>
+          </tr>
+          <tr>
+            <td>Literature review method (PRISMA 2020)</td>
+            <td>Ransomware SLR (25 papers)</td>
+            <td><a href="https://github.com/kas13060/ransomware-slr" target="_blank" rel="noopener">SLR →</a></td>
+          </tr>
+          <tr>
+            <td>Kali Linux (VirtualBox)</td>
+            <td>Lab work above</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <p class="skills-note">Also used in my labs: Splunk, Metasploit and Nmap.</p>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects">
+  <section id="projects" class="skills-bg">
     <div class="section-header">
       <div class="section-label">Portfolio</div>
       <h2 class="section-title">Featured <span>Projects</span></h2>
@@ -1026,7 +1006,7 @@
     <div class="projects-grid">
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 001</div>
+        <div class="project-number">PROJECT // 001 <span class="status-badge done">Completed</span></div>
         <img src="assets/img/projects/netmon-toolkit.png" alt="NetMon Toolkit lab topology" class="project-thumb">
         <div class="project-name">NetMon Toolkit</div>
         <p class="project-desc">Python CLI toolkit for safe IPv4 network discovery: subnet calculator, ICMP ping sweep, TCP connect scanner with banner grabbing, and single-file HTML reports. Standard library only — built for lab use on networks I own.</p>
@@ -1046,7 +1026,7 @@
       </div>
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 002</div>
+        <div class="project-number">PROJECT // 002 <span class="status-badge done">Completed</span></div>
         <div class="project-name">Enterprise SOC Lab Setup</div>
         <p class="project-desc">Building a working home SOC: Wazuh all-in-one server, Windows telemetry with Sysmon, custom detection rules (logon spray bursts, T1098 group changes) mapped to MITRE ATT&CK — the full build is a copy-pasteable how-to.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
@@ -1063,7 +1043,7 @@
       </div>
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 003</div>
+        <div class="project-number">PROJECT // 003 <span class="status-badge done">Completed</span></div>
         <div class="project-name">Web App Pentest Report</div>
         <p class="project-desc">OWASP Top 10 (2021) assessment of OWASP Juice Shop on my own local instance: SQL injection, broken access control, IDOR, XSS — each finding with reproduction steps, remediation and a report-ready format.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
@@ -1081,7 +1061,7 @@
       </div>
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 004</div>
+        <div class="project-number">PROJECT // 004 <span class="status-badge wip">In progress</span></div>
         <div class="project-name">Zero Trust Network Architecture Lab</div>
         <p class="project-desc">NIST SP 800-207 principles in Cisco Packet Tracer: four VLANs, inter-VLAN routing and nested ACLs implementing a written trust matrix — users reach exactly one web flow, the database initiates nothing, MGMT is SSH-only. Packet file in progress.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
@@ -1099,7 +1079,7 @@
       </div>
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 005</div>
+        <div class="project-number">PROJECT // 005 <span class="status-badge wip">In progress</span></div>
         <div class="project-name">Active Directory Security Lab</div>
         <p class="project-desc">Attack/defence pairs for my own isolated AD lab: password spraying, Kerberoasting and DCSync — each with exact Windows Event IDs, a Sigma-style detection, and the hardening step that removes the attack's preconditions. Lab build in progress.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
@@ -1116,7 +1096,7 @@
       </div>
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 006</div>
+        <div class="project-number">PROJECT // 006 <span class="status-badge done">Completed</span></div>
         <div class="project-name">Threat Intelligence IOC Tool</div>
         <p class="project-desc">Minimal, human-readable Python: check an IP, domain or URL against abuse.ch URLhaus (no key) and optional VirusTotal. CLI plus a tiny local web UI on the standard library http.server — escaped output, env-only keys, unit tested.</p>
         <div class="skill-tags" style="margin-bottom:1.2rem">
@@ -1127,13 +1107,13 @@
         <div class="project-footer">
           <div class="project-links">
             <a href="https://github.com/kas13060/ioc-lookup" target="_blank" class="project-link">GitHub →</a>
-            <a href="https://github.com/kas13060/ioc-lookup#usage" target="_blank" class="project-link">Try it →</a>
+            <a href="https://github.com/kas13060/ioc-lookup#usage" target="_blank" class="project-link">Usage →</a>
           </div>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-number">PROJECT // 007</div>
+        <div class="project-number">PROJECT // 007 <span class="status-badge done">Completed</span></div>
         <img src="assets/img/projects/ransomware-slr.png" alt="Ransomware SLR review pipeline" class="project-thumb">
         <div class="project-name">Ransomware SLR (2022–2026)</div>
         <p class="project-desc">Systematic literature review (PRISMA-style) of ransomware detection, prevention and incident response: 25 Crossref-verified Scimago Q1/Q2 papers across 12 review clusters, a structured per-study extraction catalog, and a reproducible scripted pipeline — every unverified value flagged, not invented.</p>
@@ -1151,87 +1131,54 @@
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-number">PROJECT // 008</div>
-        <div class="project-name">CTF Challenge Write-ups</div>
-        <p class="project-desc">Documented solutions to Capture The Flag challenges spanning forensics, crypto, web exploitation, binary exploitation, and reverse engineering — currently being collected and prepared for GitHub.</p>
-        <div class="skill-tags" style="margin-bottom:1.2rem">
-          <span class="tag green">CTF</span>
-          <span class="tag green">Forensics</span>
-          <span class="tag green">pwn</span>
-          <span class="tag green">Crypto</span>
-        </div>
-        <div class="project-footer">
-          <div class="project-links">
-            <a href="#" class="project-link disabled">In progress — coming to GitHub</a>
-          </div>
-        </div>
-      </div>
+    </div>
+  </section>
 
+  <!-- CURRENTLY BUILDING -->
+  <section id="building">
+    <div class="section-header">
+      <div class="section-label">In the Lab</div>
+      <h2 class="section-title">Currently <span>Building</span></h2>
+      <div class="section-divider"></div>
     </div>
-    <div class="github-stats">
-      <img src="https://github-readme-stats.vercel.app/api?username=kas13060&show_icons=true&hide_border=true&bg_color=0d141d&title_color=2ad4e8&text_color=dde8f0&icon_color=34d399" alt="kas13060 GitHub stats">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kas13060&layout=compact&hide_border=true&bg_color=0d141d&title_color=2ad4e8&text_color=dde8f0" alt="kas13060 top languages">
-    </div>
+    <ul class="building-list">
+      <li>
+        <span class="status-badge planned">Planned</span>
+        <span><strong>Honeypot network</strong> — multi-service honeypot (SSH, FTP, HTTP, SMB) with a bait filesystem, session replay, threat-intelligence enrichment and daily reports.</span>
+      </li>
+      <li>
+        <span class="status-badge planned">Planned</span>
+        <span><strong>Purple-team lab</strong> — Docker lab with a deliberately vulnerable FastAPI gateway in front of Vaultwarden: attack it, fix it, then write detections for Wazuh.</span>
+      </li>
+      <li>
+        <span class="status-badge planned">Planned</span>
+        <span><strong>SDN anomaly detection</strong> — multi-branch enterprise network in Packet Tracer with telemetry sent to a Python or Isolation Forest anomaly detector.</span>
+      </li>
+      <li>
+        <span class="status-badge planned">Planned</span>
+        <span><strong>LLM security research</strong> — systematic literature review and a research paper on defending LLM agents against prompt injection with a lightweight guard model.</span>
+      </li>
+    </ul>
   </section>
 
   <!-- CERTIFICATIONS -->
   <section id="certifications" class="certs-bg">
     <div class="section-header">
-      <div class="section-label">Credentials</div>
-      <h2 class="section-title">Certifications & <span>Training</span></h2>
+      <div class="section-label">Learning Path</div>
+      <h2 class="section-title">Certifications and <span>Learning Path</span></h2>
       <div class="section-divider"></div>
     </div>
-    <div class="certs-grid">
+    <div class="certs-grid single">
       <div class="cert-card">
-        <div class="cert-icon">🏆</div>
+        <div class="cert-icon">🎯</div>
         <div>
           <div class="cert-name">CompTIA Security+</div>
           <div class="cert-org">CompTIA</div>
-          <div class="cert-status">✓ CERTIFIED</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🔴</div>
-        <div>
-          <div class="cert-name">CEH</div>
-          <div class="cert-org">EC-Council</div>
-          <div class="cert-status pending">⟳ IN PROGRESS</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">☁️</div>
-        <div>
-          <div class="cert-name">AWS Security Specialty</div>
-          <div class="cert-org">Amazon Web Services</div>
-          <div class="cert-status pending">⟳ IN PROGRESS</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🛡️</div>
-        <div>
-          <div class="cert-name">CompTIA CySA+</div>
-          <div class="cert-org">CompTIA</div>
-          <div class="cert-status">✓ CERTIFIED</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🔬</div>
-        <div>
-          <div class="cert-name">OSCP</div>
-          <div class="cert-org">Offensive Security</div>
-          <div class="cert-status pending">⟳ PURSUING</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🌐</div>
-        <div>
-          <div class="cert-name">eJPT</div>
-          <div class="cert-org">eLearnSecurity</div>
-          <div class="cert-status">✓ CERTIFIED</div>
+          <div class="cert-status pending">⟳ PLANNED NEXT</div>
         </div>
       </div>
     </div>
+    <p class="certs-note">Currently learning: security fundamentals, SOC operations and detection engineering through lab projects.</p>
   </section>
 
   <!-- CONTACT -->
@@ -1243,58 +1190,34 @@
     </div>
     <div class="contact-wrapper">
       <div class="contact-info">
-        <h3>Let's Work Together</h3>
-        <p>Open to freelance engagements, full-time roles, and collaborative security research. Whether you need a penetration test, SOC consultation, or a cloud security review — let's connect.</p>
+        <h3>Open to graduate and entry-level roles, internships and research collaboration.</h3>
         <div class="contact-links">
-          <a href="mailto:andrew.sombe@email.com" class="contact-link">
+          <a href="mailto:andrewsombe100@gmail.com" class="contact-link">
             <div class="contact-link-icon">✉</div>
-            andrew.sombe@email.com
+            andrewsombe100@gmail.com
           </a>
-          <a href="https://linkedin.com/in/andrewsombe" class="contact-link" target="_blank">
+          <a href="https://www.linkedin.com/in/andrew-sombe-910713386" class="contact-link" target="_blank" rel="noopener">
             <div class="contact-link-icon">in</div>
-            linkedin.com/in/andrewsombe
+            linkedin.com/in/andrew-sombe-910713386
           </a>
-          <a href="https://github.com/kas13060" class="contact-link" target="_blank">
+          <a href="https://github.com/kas13060" class="contact-link" target="_blank" rel="noopener">
             <div class="contact-link-icon">⌥</div>
             github.com/kas13060
           </a>
-          <a href="https://tryhackme.com/p/andrewsombe" class="contact-link" target="_blank">
-            <div class="contact-link-icon">🔒</div>
-            TryHackMe Profile
-          </a>
         </div>
       </div>
-      <form class="contact-form" id="contact-form" novalidate>
-        <div class="form-group">
-          <label class="form-label" for="cf-name">Name</label>
-          <input type="text" class="form-input" id="cf-name" name="name" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="cf-email">Email</label>
-          <input type="email" class="form-input" id="cf-email" name="email" placeholder="your@email.com" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="cf-subject">Subject</label>
-          <input type="text" class="form-input" id="cf-subject" name="subject" placeholder="Security consultation, Pentest, etc.">
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="cf-message">Message</label>
-          <textarea class="form-textarea" id="cf-message" name="message" placeholder="Tell me about your security needs..." required></textarea>
-        </div>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        <button type="submit" class="btn-primary" style="width:100%; text-align:center; font-size:0.8rem; padding:1rem">SEND MESSAGE</button>
-      </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-copy">
-      © 2025 <span>Andrew SOMBE</span> — Cybersecurity Professional
+      © 2026 <span>Andrew SOMBE</span>
     </div>
     <div class="footer-links">
       <a href="#home">Top</a>
       <a href="#about">About</a>
+      <a href="#education">Education</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
@@ -1303,8 +1226,6 @@
   <script>
     (() => {
       "use strict";
-
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       // Nav background on scroll
       const nav = document.querySelector("nav");
@@ -1341,56 +1262,6 @@
         { rootMargin: "-40% 0px -55% 0px" }
       );
       sections.forEach((s) => sectionObserver.observe(s));
-
-      // Skill bars fill when they enter the viewport
-      const bars = document.querySelectorAll(".skill-bar-fill");
-      if (reducedMotion) {
-        bars.forEach((b) => (b.style.width = b.dataset.w));
-      } else {
-        const barObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.style.width = entry.target.dataset.w;
-                barObserver.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.4 }
-        );
-        bars.forEach((b) => barObserver.observe(b));
-      }
-
-      // Contact form: validate, then hand off to the visitor's email client
-      const form = document.getElementById("contact-form");
-      const status = document.getElementById("form-status");
-      const fields = ["name", "email", "message"].map((n) => form.elements[n]);
-
-      const setError = (input, message) => {
-        input.classList.add("invalid");
-        status.textContent = message;
-        status.classList.add("error");
-      };
-      const clearErrors = () => {
-        fields.forEach((f) => f.classList.remove("invalid"));
-        status.classList.remove("error");
-      };
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        clearErrors();
-        const [name, email, message] = fields;
-        if (!name.value.trim()) return setError(name, "Please add your name.");
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) return setError(email, "Please use a valid email address.");
-        if (!message.value.trim()) return setError(message, "Please add a short message.");
-        status.classList.remove("error");
-        status.textContent = "Opening your email client...";
-        const subject = encodeURIComponent(form.elements.subject.value.trim() || "Contact from portfolio");
-        const body = encodeURIComponent(message.value.trim() + "\n\n— " + name.value.trim() + " (" + email.value.trim() + ")");
-        window.location.href = "mailto:andrew.sombe@email.com?subject=" + subject + "&body=" + body;
-      });
-
-      fields.forEach((f) => f.addEventListener("input", () => f.classList.remove("invalid")));
     })();
   </script>
 </body>
