@@ -393,9 +393,19 @@
       display: grid;
       grid-template-columns: 1.1fr 1fr;
       gap: 4rem;
-      align-items: center;
+      align-items: start;
       max-width: 1160px;
       margin-inline: auto;
+    }
+    .about-photo {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      border: 1px solid var(--dark-border);
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      background: var(--dark-surface);
     }
     .about-text p {
       font-size: 0.98rem;
@@ -900,7 +910,9 @@
         <p>Most of what I know comes from building things in my own lab: a Wazuh SOC setup with custom detection rules, a zero-trust network in Cisco Packet Tracer, an Active Directory attack-and-detection lab, a web app pentest report on OWASP Juice Shop, and a systematic literature review on ransomware. Every project is on GitHub with a README so you can see exactly what I did and what is still unfinished.</p>
         <p>I'm based in Papua New Guinea and I'm interested in roles in banking, government, telecoms and industry (including OT security for mining and manufacturing). Right now I'm working toward my CompTIA Security+ and continuing my security research at university.</p>
       </div>
-      <div class="about-stats">
+      <div class="about-side">
+        <img src="assets/img/andrew-portrait.jpg" alt="Portrait photo of Andrew Sombe wearing a dark beret and maroon jacket in front of a wire fence" class="about-photo" width="480" height="651">
+        <div class="about-stats">
         <div class="stat-card">
           <div class="stat-number">7</div>
           <div class="stat-label">Public Projects</div>
@@ -916,6 +928,7 @@
         <div class="stat-card">
           <div class="stat-number">4</div>
           <div class="stat-label">VLANs in ZTNA Lab</div>
+        </div>
         </div>
       </div>
     </div>
